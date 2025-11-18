@@ -1,76 +1,70 @@
 import React from 'react';
 import { View, Text, TextInput, Image, ScrollView, Linking, TouchableOpacity } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { styles } from './style'; 
-import Fotoface from '../../assets/facebook.png'
-import FotoGoogle from '../../assets/google.png'
-
+import { styles } from './style';
+import Fotoface from '../../assets/facebook.png';
+import FotoGoogle from '../../assets/google.png';
+import Logo from '../../assets/LogoSpotifyBranco.png'
 const LoginScreen: React.FC = () => {
 
-  return (
-   
-    <ScrollView  style={styles.scroll}
-    
-      ><View style={styles.container}>
-          
-       <Image 
-          source={require('../../assets/LogoSpotifyBranco.png')} 
-          style={styles.logo} 
-        />
-         <Text style={styles.title}>Olá de novo</Text>
-          <Text style={styles.inputLabel}>E-mail ou nome de usuário</Text>
-           <TextInput
-             style={styles.inputField}
-            />
-                 <TouchableOpacity 
-                  style={styles.primaryButton}
+    return (
+        <ScrollView style={styles.scroll}>
+            <View style={styles.container}>
+                
+                <Image
+                    source={Logo}
+                    style={styles.logo}
+                />
+                <Text style={styles.title}>Olá de novo</Text>
+                <Text style={styles.inputLabel}>E-mail ou nome de usuário</Text>
+                <TextInput
+                    style={styles.inputField}
+                />
+                
+                <TouchableOpacity
+                    style={styles.primaryButton}
                 >
-                  <Text style={styles.primaryButtonText}>Continuar</Text>
-               </TouchableOpacity>
-               <Text style={styles.separator}>ou</Text>
-        
-        <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome5 name="mobile-alt" size={20} color="white" style={styles.icon}/>
-          <Text style={styles.socialButtonText}>Continuar com um número de {'\n'}               telefone</Text>
-        </TouchableOpacity>
-       
-        <TouchableOpacity style={styles.socialButton}>
-          <Image source={FotoGoogle} style={styles.Face}/>
-          <Text style={styles.socialButtonText}>Continuar com o Google</Text>
-        </TouchableOpacity>
-         
-        <TouchableOpacity style={styles.socialButton} >
-          <Image source={Fotoface} style={styles.Face}/>
-          <Text style={styles.socialButtonText}>Continuar com o Facebook</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome5 name="apple" size={20} color="white" style={styles.icon} />
-          <Text style={styles.socialButtonText}>Continuar com a Apple</Text>
-        </TouchableOpacity>
+                    <Text style={styles.primaryButtonText}>Continuar</Text>
+                </TouchableOpacity>
+                
+                <Text style={styles.separator}>ou</Text>
+                
+                <TouchableOpacity style={styles.socialButton}>
+                    <FontAwesome5 name="mobile-alt" size={20} color="white" style={styles.icon}/>
+                    <Text style={styles.socialButtonText}>Continuar com um número de {'\n'}           telefone</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.socialButton}>
+                    <Image source={FotoGoogle} style={styles.Face}/>
+                    <Text style={styles.socialButtonText}>Continuar com o Google</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.socialButton} >
+                    <Image source={Fotoface} style={styles.Face}/>
+                    <Text style={styles.socialButtonText}>Continuar com o Facebook</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.socialButton}>
+                    <FontAwesome5 name="apple" size={20} color="white" style={styles.icon} />
+                    <Text style={styles.socialButtonText}>Continuar com a Apple</Text>
+                </TouchableOpacity>
 
-        <Text style={styles.noAccountText}>Não tem uma conta?</Text>
-        <TouchableOpacity>
-          <Text style={styles.signupText}>Inscrever-se</Text>
-        </TouchableOpacity>
-        <Text style={styles.footerText}>
-          Este site é protegido pelo reCAPTCHA e está sujeito à{' '}
-          <Text style={styles.footerLink} onPress={() => Linking.openURL('https://policies.google.com/privacy')}>Política de Privacidade</Text>{' '}
-          e aos{' '}
-          <Text style={styles.footerLink} onPress={() => Linking.openURL('https://policies.google.com/terms')}>Termos de Serviço</Text> do Google.
-        </Text>
+                <Text style={styles.noAccountText}>Não tem uma conta?</Text>
+                
+                <TouchableOpacity>
+                    <Text style={styles.signupText}>Inscrever-se</Text>
+                </TouchableOpacity>
+                
+                <Text style={styles.footerText}>
+                    Este site é protegido pelo reCAPTCHA e está sujeito à{' '}
+                    <Text style={styles.footerLink} onPress={() => Linking.openURL('https://policies.google.com/privacy')}>Política de Privacidade</Text>{' '}
+                    e aos{' '}
+                    <Text style={styles.footerLink} onPress={() => Linking.openURL('https://policies.google.com/terms')}>Termos de Serviço</Text> do Google.
+                </Text>
 
-      </View>
-    </ScrollView>
-  );
+            </View>
+        </ScrollView>
+    );
 };
 
 export default LoginScreen;
-            
-
-
-
-        
-      
-        
-       
