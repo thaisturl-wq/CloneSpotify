@@ -8,11 +8,10 @@ export default function App() {
     <>
       <StatusBar style='light' /> 
        <HomeScreen />   
-      {/* <LoginScreen/> */}
+     {/* <LoginScreen/>  */}
       
     </>
   );
 }
 
-// Nota: O StyleSheet.create que estava aqui pode ser removido, 
-// pois a estilização é tratada dentro de HomeScreen.
+

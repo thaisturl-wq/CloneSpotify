@@ -6,13 +6,13 @@ import BottomBar from '../../components/BottomBar';
 import { homeStyles } from './style'; 
 
 const HorizontalCardsData = [
-  { id: '1', title: 'Músicas Curtidas', iconName: null, color: null, imageUrl: require('../../assets/musicascurtidas.jpg') },
-  { id: '2', title: 'Rádio de Complicated', iconName: null , color: null, imageUrl: require( '../../assets/complicated.jpg' )},
-  { id: '3', title: 'Minha playlist #11', iconName: null, color: null, imageUrl: require( '../../assets/minha_playlist.jpg') },
-  { id: '4', title: 'Mix de Taylor Swift', iconName: null, color: null, imageUrl: require( '../../assets/taylor_mix.jpg') },
-  // { id: '4', title: 'Mix de Taylor Swift', iconName: null, color: null, imageUrl: require( '../../assets/taylor_mix.jpg') },
-  // { id: '5', title: 'Mix de Taylor Swift', iconName: null, color: null, imageUrl: require( '../../assets/taylor_mix.jpg') },
-  // { id: '6', title: 'Mix de Taylor Swift', iconName: null, color: null, imageUrl: require( '../../assets/taylor_mix.jpg') },
+  { id: '1', title: 'Músicas Curtidas',  imageUrl: require('../../assets/musicascurtidas.jpg') },
+  { id: '2', title: 'Rádio de Complicated',  imageUrl: require( '../../assets/complicated.jpg' )},
+  { id: '3', title: 'Minha playlist #11',  imageUrl: require( '../../assets/minha_playlist.jpg') },
+  { id: '4', title: 'Mix de Taylor Swift',  imageUrl: require( '../../assets/taylor_mix.jpg') },
+  { id: '5', title: 'Musica para Bebes', imageUrl: require( '../../assets/Musicadebebe.png') },
+  { id: '6', title: 'Rock Legends', imageUrl: require( '../../assets/MixRocklegends.png') },
+  { id: '7', title: 'Sofrencia', imageUrl: require( '../../assets/Sofrencia.png') },
   ];
 const MixesData = [
   { id: 'm1', overlay: 'Mix anos 2000', title: 'Britney Spears, Jorge & Mateus, Rihanna e mais', imageUrl: require('../../assets/mix_anos_2000.jpg') },
@@ -41,16 +41,14 @@ const HomeScreen: React.FC = () => {
             <MaterialCommunityIcons name="bell-outline" size={26} color="white" />
         </View>
 
-        {/* 2. Filtros (Tudo, Música, Podcasts) */}
+       
         <View style={homeStyles.filterContainer}>
             <Text style={[homeStyles.filterButton, homeStyles.filterActive]}>Tudo</Text>
             <Text style={homeStyles.filterButton}>Música</Text>
             <Text style={homeStyles.filterButton}>Podcasts</Text>
         </View>
 
-        {/* 3. Cards Pequenos (Músicas Curtidas, Rádios, Mixes) - Layout em Duas Colunas */}
-        {/* Usamos FlatList, mas como são poucos itens, View e Flexbox seria suficiente */}
-        <View style={homeStyles.horizontalCardsGrid}>
+          <View style={homeStyles.horizontalCardsGrid}>
             {HorizontalCardsData.map(item => (
                 <Pressable key={item.id} style={homeStyles.smallCard}>
                     <Image source={item.imageUrl} style={homeStyles.smallCardImage} />  

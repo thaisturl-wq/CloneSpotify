@@ -1,4 +1,3 @@
-import iconSet from '@expo/vector-icons/build/Fontisto';
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -9,6 +8,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingTop: 80,
     alignItems: 'center',
+    paddingBottom: 40,
   },
   logo: {
     width: 60,
@@ -76,6 +76,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#A7A7A7',
     marginBottom: 6,
+   
   },
   socialButtonText: {
     color: '#f8f4f4ff',
