@@ -1,14 +1,15 @@
-
 import React from 'react';
 import { View, Text, TextInput, Image, ScrollView, Linking, TouchableOpacity } from 'react-native';
-import { FontAwesome5, } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { styles } from './style'; 
+import Fotoface from '../../assets/facebook.png'
+import FotoGoogle from '../../assets/google.png'
 
 const LoginScreen: React.FC = () => {
 
   return (
    
-    <ScrollView  style={{flex: 1, backgroundColor: '#000'}}
+    <ScrollView  style={styles.scroll}
     
       ><View style={styles.container}>
           
@@ -20,12 +21,8 @@ const LoginScreen: React.FC = () => {
           <Text style={styles.inputLabel}>E-mail ou nome de usuário</Text>
            <TextInput
              style={styles.inputField}
-             placeholder="" 
-             placeholderTextColor="#A7A7A7"
-             keyboardType="email-address"
-             />
-             
-               <TouchableOpacity 
+            />
+                 <TouchableOpacity 
                   style={styles.primaryButton}
                 >
                   <Text style={styles.primaryButtonText}>Continuar</Text>
@@ -33,24 +30,23 @@ const LoginScreen: React.FC = () => {
                <Text style={styles.separator}>ou</Text>
         
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome5 name="mobile-alt" size={20} color="white" />
+          <FontAwesome5 name="mobile-alt" size={20} color="white" style={styles.icon}/>
           <Text style={styles.socialButtonText}>Continuar com um número de {'\n'}               telefone</Text>
         </TouchableOpacity>
        
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome5 name="google" size={20} color="green"  />
-          <Text style={styles.socialButtonText}>  
-                             Continuar com o Google</Text>
+          <Image source={FotoGoogle} style={styles.Face}/>
+          <Text style={styles.socialButtonText}>Continuar com o Google</Text>
         </TouchableOpacity>
          
         <TouchableOpacity style={styles.socialButton} >
-          <FontAwesome5 name="facebook" size={20} color="blue"  />
+          <Image source={Fotoface} style={styles.Face}/>
           <Text style={styles.socialButtonText}>Continuar com o Facebook</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome5 name="apple" size={20} color="white" />
-          <Text style={styles.socialButtonText}>      Continuar com a Apple</Text>
+          <FontAwesome5 name="apple" size={20} color="white" style={styles.icon} />
+          <Text style={styles.socialButtonText}>Continuar com a Apple</Text>
         </TouchableOpacity>
 
         <Text style={styles.noAccountText}>Não tem uma conta?</Text>

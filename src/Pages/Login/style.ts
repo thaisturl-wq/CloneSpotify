@@ -1,7 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  
+  scroll:{
+    flex: 1,
+     backgroundColor: '#000'
+
+  },
   container: {
     flex: 1, 
     backgroundColor: '#000000', 
@@ -10,12 +14,25 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 40,
   },
+
   logo: {
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
     marginBottom: 4,
-    
   },
+
+    icon: {
+    position: 'absolute',
+    left: 30,
+    },
+
+    Face: {
+      width: 30,
+      height: 30,
+      left: 20,
+      position: 'absolute'
+    },
+ 
   title: {
     color: 'white',
     fontSize: 60,
@@ -28,9 +45,10 @@ export const styles = StyleSheet.create({
     color: '#d3cbcbff', 
     alignSelf: 'flex-start', 
     marginBottom: 10,
-    marginLeft: 12,
+    marginLeft: -12,
     fontSize: 14,
     fontWeight: 700,
+    
 
   },
   inputField: {
@@ -66,7 +84,7 @@ export const styles = StyleSheet.create({
   },
   
   socialButton: {
-    width: 380,
+    width: 350,
     height: 60,
     backgroundColor: 'black',
     flexDirection: 'row',
@@ -83,6 +101,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginLeft: 60,
+    alignItems: 'center'
   },
   
   signupText: {

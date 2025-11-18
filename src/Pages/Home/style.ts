@@ -8,6 +8,7 @@ export const homeStyles = StyleSheet.create({
     backgroundColor: '#000',
     paddingTop: 60,
       },
+      
     fotobebe:{
       width: 30,
       height: 30,
